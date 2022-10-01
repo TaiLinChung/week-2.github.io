@@ -10,7 +10,7 @@
 #         # print(num)                                       #                           判定迴圈計數是否達到max+1，step增加動作，
 #         total=total+num                                    #                           以及內部的total=total+num各會執行N次
 #     print(total)                                           #print(total) 會執行1次，時間複雜度為1，  
-                                                             #所以每呼叫一次函式複雜度為O(1+1+3N+1)=O(N)
+                                                             #所以每呼叫一次函式複雜度為O(2+3N+1)=O(N)
 # calculate(1, 3, 1) # 你的程式要能夠計算 1+2+3，最後印出 6
 # calculate(4, 8, 2) # 你的程式要能夠計算 4+6+8，最後印出 18
 # calculate(-1, 2, 2) # 你的程式要能夠計算 -1+1，最後印出 0
@@ -35,7 +35,7 @@
 #             total=total+data["employees"][i]["salary"]            #每次進入迴圈都做加總，時間複雜度=n
 #             numFalse=numFalse+1                                   #每次進入迴圈都做加總，時間複雜度=n
 #     print(total/numFalse)                                         #跳出迴圈後print，時間複雜度=1
-                                                                    #所以每呼叫一次函式複雜度為O(1+1+4N+1)=O(N)
+                                                                    #所以每呼叫一次函式複雜度為O(2+4N+1)=O(N)
 
 # avg({
 #     "employees":[
@@ -109,11 +109,11 @@
 #     max=nums[0]*nums[1]                      #每次呼叫就會做一次，時間複雜度=1
 #     for i in range(len(nums)):               #定義變數i做輪巡，時間複雜度=1+2*N
 #         # print(nums[i])
-#         for j in range(i+1,len(nums),+1):    #在上個回圈內，定義變數j做輪巡，時間複雜度=N+2*N*N
+#         for j in range(i+1,len(nums),+1):    #在上個回圈內，定義變數j做輪巡，時間複雜度=N*(1+2*N)=N+2*N*N
 #             # print(nums[j])
 #             if nums[i]*nums[j]>=max:         #時間複雜度=1*N*N
 #                 max=nums[i]*nums[j]          #時間複雜度=1*N*N
-#     print(max)                                #所以每呼叫的時間複雜度O(1+1+1+2*N+N+4*N*N)=O(N*N)
+#     print(max)                                #所以每呼叫的時間複雜度O(2+1+2*N+N+4*N*N)=O(N*N)
 
 # maxProduct([5, 20, 2, 6]) # 得到 120
 # maxProduct([10, -20, 0, 3]) # 得到 30
@@ -133,13 +133,13 @@
 #     listans=[]                               #每次呼叫就定義一次，時間複雜度=1
 #     for i in range(len(nums)):               #定義變數i做輪巡，時間複雜度=N
 #         # print(nums[i])
-#         for j in range(i+1,len(nums),+1):    #在回圈內做輪巡，時間複雜度=N+2*N*N
+#         for j in range(i+1,len(nums),+1):    #在回圈內做輪巡，時間複雜度=N*(1+2*N)=N+2*N*N
 #             if nums[i]+nums[j]==target:      #時間複雜度=N*N
 #                 listans.append(i)            #時間複雜度=N*N
 #                 listans.append(j)            #時間複雜度=N*N
 
 #     return listans                           #時間複雜度=1
-# result=twoSum([2, 11, 7, 15], 9)             #所以每呼叫的時間複雜度O(1+1+N+N+5*N*N+1)=O(N*N)
+# result=twoSum([2, 11, 7, 15], 9)             #所以每呼叫的時間複雜度O(2+N+N+5*N*N+1)=O(N*N)
 # print(result) # show [0, 2] because nums[0]+nums[2] is 9
 
 
