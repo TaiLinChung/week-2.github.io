@@ -7,10 +7,10 @@
 # # 請用你的程式補完這個函式的區塊                              #時間複雜度
 #     total=0                                                #賦予total變數值1 ，時間複雜度為1
 #     for num in range(min,max+1,step):                      #迴圈內初始num為min會執行1次，時間複雜度為1，
-#         # print(num)                                       #判定迴圈計數是否達到max+1，step增加動作，以及內部的total=total+num和
-#         total=total+num                                    #                                           print出結果各會執行N次
-#     print(total)                                           #所以每呼叫一次函式複雜度為O(1+1+4N)=O(N)
-
+#         # print(num)                                       #                           判定迴圈計數是否達到max+1，step增加動作，
+#         total=total+num                                    #                           以及內部的total=total+num各會執行N次
+#     print(total)                                           #print(total) 會執行1次，時間複雜度為1，  
+                                                             #所以每呼叫一次函式複雜度為O(1+1+3N+1)=O(N)
 # calculate(1, 3, 1) # 你的程式要能夠計算 1+2+3，最後印出 6
 # calculate(4, 8, 2) # 你的程式要能夠計算 4+6+8，最後印出 18
 # calculate(-1, 2, 2) # 你的程式要能夠計算 -1+1，最後印出 0
